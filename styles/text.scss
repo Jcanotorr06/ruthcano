@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    a{
+        @apply hover:underline transition-all;
+    }
+    .paragraph-xs {
+        @apply text-paragraph-xs leading-paragraph-xs;
+    }
+    .paragraph-sm {
+        @apply text-paragraph-sm leading-paragraph-sm;
+    }
+    .paragraph-md {
+        @apply text-paragraph-md leading-paragraph-md;
+    }
+    .paragraph-lg {
+        @apply text-paragraph-lg leading-paragraph-lg;
+    }
+    .paragraph-xl {
+        @apply text-paragraph-xl leading-paragraph-xl;
+    }
+    .ui-3xs {
+        @apply text-ui-3xs leading-ui-3xs;
+        &.upper {
+            @apply uppercase tracking-ui-3xs-capitalized;
+        }
+    }
+    .ui-2xs {
+        @apply text-ui-2xs leading-ui-2xs;
+        &.upper {
+            @apply uppercase tracking-ui-2xs-capitalized;
+        }
+    }
+    .ui-xs {
+        @apply text-ui-xs leading-ui-xs;
+        &.upper {
+            @apply uppercase tracking-ui-xs-capitalized;
+        }
+    }
+    .ui-sm {
+        @apply text-ui-sm leading-ui-sm;
+        &.upper {
+            @apply uppercase tracking-ui-sm-capitalized;
+        }
+    }
+    .ui-md {
+        @apply text-ui-md leading-ui-md;
+        &.upper {
+            @apply uppercase tracking-ui-md-capitalized;
+        }
+    }
+    .ui-lg {
+        @apply text-ui-lg leading-ui-lg;
+        &.upper {
+            @apply uppercase tracking-ui-lg-capitalized;
+        }
+    }
+    .ui-xl {
+        @apply text-ui-xl leading-ui-xl;
+        &.upper {
+            @apply uppercase tracking-ui-xl-capitalized;
+        }
+    }
+    .ui-2xl {
+        @apply text-ui-2xl leading-ui-2xl;
+        &.upper {
+            @apply uppercase tracking-ui-2xl-capitalized;
+        }
+    }
+    .ui-3xl {
+        @apply text-ui-3xl leading-ui-3xl;
+        &.upper {
+            @apply uppercase tracking-ui-3xl-capitalized;
+        }
+    }
+    .ui-4xl {
+        @apply text-ui-4xl leading-ui-4xl;
+        &.upper {
+            @apply uppercase tracking-ui-4xl-capitalized;
+        }
+    }
+    .ui-5xl {
+        @apply text-ui-5xl leading-ui-5xl tracking-ui-5xl;
+        &.upper {
+            @apply uppercase tracking-ui-5xl-capitalized;
+        }
+    }
+    .ui-6xl {
+        @apply text-ui-6xl leading-ui-6xl tracking-ui-6xl;
+        &.upper {
+            @apply uppercase tracking-ui-6xl-capitalized;
+        }
+    }
+    .ui-7xl {
+        @apply text-ui-7xl leading-ui-7xl tracking-ui-7xl;
+        &.upper {
+            @apply uppercase tracking-ui-7xl-capitalized;
+        }
+    }
+    .ui-8xl {
+        @apply text-ui-8xl leading-ui-8xl;
+        &.upper {
+            @apply uppercase tracking-ui-8xl-capitalized;
+        }
+    }
+    .ui-9xl {
+        @apply text-ui-9xl leading-ui-9xl;
+        &.upper {
+            @apply uppercase tracking-ui-9xl-capitalized;
+        }
+    }
+    .ui-10xl {
+        @apply text-ui-10xl leading-ui-10xl;
+        &.upper {
+            @apply uppercase tracking-ui-10xl-capitalized;
+        }
+    }
+    .ui-11xl {
+        @apply text-ui-11xl leading-ui-11xl;
+        &.upper {
+            @apply uppercase tracking-ui-11xl-capitalized;
+        }
+    }
+    .ui-12xl {
+        @apply text-ui-12xl leading-ui-12xl;
+        &.upper {
+            @apply uppercase tracking-ui-12xl-capitalized;
+        }
+    }
+    .ui-13xl {
+        @apply text-ui-13xl leading-ui-13xl;
+        &.upper {
+            @apply uppercase tracking-ui-13xl-capitalized;
+        }
+    }
+    .ui-14xl {
+        @apply text-ui-14xl leading-ui-14xl;
+        &.upper {
+            @apply uppercase tracking-ui-14xl-capitalized;
+        }
+    }
+    .ui-15xl {
+        @apply text-ui-15xl leading-ui-15xl;
+        &.upper {
+            @apply uppercase tracking-ui-15xl-capitalized;
+        }
+    }
+    .ui-16xl {
+        @apply text-ui-16xl leading-ui-16xl;
+        &.upper {
+            @apply uppercase tracking-ui-16xl-capitalized;
+        }
+    }
+}

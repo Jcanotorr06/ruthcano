@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "text";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply font-main bg-background text-primary-body;
+}
+
+#__next {
+  @apply min-h-screen overflow-x-hidden;
+}
+
+.videography-card {
+  background: url("https://images.unsplash.com/photo-1497015289639-54688650d173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80") rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.photography-card {
+  background: url("https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.designs-card {
+  background: url("https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80") rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  opacity: 0.5;
+}
+
+*::-webkit-scrollbar-track {
+  background: #484848;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(174, 174, 174, 0.6);
+  border-radius: 100px;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn-line {
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn-line::before,
+.menu-btn-line::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn-line::before {
+  transform: translateY(-8px);
+}
+
+.menu-btn-line::after {
+  transform: translateY(8px);
+}
+
+/* Animation */
+
+.menu-btn.menu-open .menu-btn-line {
+  background: transparent;
+  transform: translateX(-50px);
+}
+
+.menu-btn.menu-open .menu-btn-line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.menu-open .menu-btn-line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
