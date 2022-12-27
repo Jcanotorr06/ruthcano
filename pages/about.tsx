@@ -47,6 +47,13 @@ const About:NextPage<PageProps>= (props:PageProps) => {
       <NextSeo
         title="About"
         description="About Ruth Cano"
+        additionalLinkTags={[
+          {
+            rel: "preload",
+            href: "/images/about.webp",
+            as: "image",
+          }
+        ]}
       />
       <section className="w-full flex flex-col pt-[60px] self-stretch grow">
         <Message font={Migra} translations={translations}/>
