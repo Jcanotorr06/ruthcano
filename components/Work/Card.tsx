@@ -20,8 +20,13 @@ const Card:FC<Props> = (props:Props) => {
 
     const isVideo = category === "videography"
 
-    const videoId = (media.type === "external" && isVideo) ? media.external.url.split("v=")[1] : null
-    const src = media.type === "external" ? isVideo ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : media.external.url : media.file.url
+    // get video id from url youtube (shortened or full) or vimeo (full)
+    const isYoutube = isVideo &&  media.type === "external" && media.external.url.includes("youtube")
+    const isYoutubeShort = isVideo && media.type === "external" && media.external.url.includes("youtu.be")
+    const isVimeo = isVideo && media.type === "external" && media.external.url.includes("vimeo")
+    const videoId = isYoutube ? media.external.url.split("v=")[1] : isYoutubeShort ? media.external.url.split("be/")[1] : isVimeo ? media.external.url.split("com/")[1] : null
+
+    const src = media.type === "external" ? isYoutube || isYoutubeShort ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : isVimeo ? `https://vumbnail.com/${videoId}.jpg` : media.external.url : media.file.url
 
     const handleOpen = () => {
         setSelected(page)

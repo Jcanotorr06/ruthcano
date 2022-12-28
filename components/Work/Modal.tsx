@@ -9,6 +9,7 @@ type Props = {
 
 const Modal:FC<Props> = (props:Props) => {
     const { page, selSelected } = props
+    const currentUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://www.ruthcano.com"
 
     const title = page? page.properties.Name.title[0].plain_text : null
     const description = page? page.properties.Description.rich_text[0].plain_text : null
@@ -17,15 +18,23 @@ const Modal:FC<Props> = (props:Props) => {
 
     const isVideo = category === "videography"
 
-    const videoId = media? (media.type === "external" && isVideo) ? media.external.url.split("v=")[1] : null : null
-    const src = media ? media.type === "external" ? isVideo ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : media.external.url : media.file.url : null
+    /* const videoId = media? (media.type === "external" && isVideo) ? media.external.url.split("v=")[1] : null : null
+    const src = media ? media.type === "external" ? isVideo ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : media.external.url : media.file.url : null */
+
+    // get video id from url youtube (shortened or full) or vimeo (full)
+    const isYoutube = media ? isVideo &&  media.type === "external" && media.external.url.includes("youtube"): null
+    const isYoutubeShort = media ? isVideo && media.type === "external" && media.external.url.includes("youtu.be"): null
+    const isVimeo = media ? isVideo && media.type === "external" && media.external.url.includes("vimeo"): null
+    const videoId = media ? (media.type === "external" && isVideo)? isYoutube ? media.external.url.split("v=")[1] : isYoutubeShort ? media.external.url.split("be/")[1] : isVimeo ? media.external.url.split("com/")[1] : null: null: null
+
+    const src = media ? media.type === "external" ? isYoutube || isYoutubeShort ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : isVimeo ? `https://vumbnail.com/${videoId}.jpg` : media.external.url : media.file.url : null
+
+    const embedUrl = videoId ? isYoutube || isYoutubeShort ? `https://www.youtube.com/embed/${videoId}?autoplay=1&origin=${currentUrl}` : isVimeo ? `https://player.vimeo.com/video/${videoId}?autoplay=1&origin=${currentUrl}` : null : null
 
     const handleClose = () => {
         selSelected(null)
         document.body.style.overflow = "auto"
     }
-
-    const currentUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://www.ruthcano.com"
 
     return (
         <AnimatePresence>
@@ -46,9 +55,9 @@ const Modal:FC<Props> = (props:Props) => {
                             }
                             <div className="flex-1 w-full p-2 flex justify-center items-center" style={{maxHeight: "80vh"}}>
                                 {
-                                    isVideo ?
+                                    isVideo && embedUrl ?
                                         <iframe
-                                            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&origin=${currentUrl}}`}
+                                            src={embedUrl}
                                             title={title}
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
