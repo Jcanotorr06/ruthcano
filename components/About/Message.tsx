@@ -16,17 +16,17 @@ const Message:FC<Props> = (props:Props) => {
     const title_2 = translations.find((translation) => translation.label === "title_2")
 
     return (
-        <article className="relative w-full h-screen -mt-24 flex flex-col items-center z-0">
+        <article className="relative w-full lg:h-screen -mt-24 flex flex-col items-center z-0">
             <div className="mt-24 grow z-10 w-full mix-blend-difference flex items-end lg:px-24">
                 <h1 className={`ui-5xl lg:ui-9xl upper ${font.className}`}  data-translate="title_1">
                     {title_1 ? title_1.value : "title_1"}
                 </h1>
             </div>
             <Image
-                src="/images/about.webp"
+                src="/images/about_2.webp"
                 alt="Ruth Cano"
-                width={547}
-                height={749}
+                width={828}
+                height={465}
                 sizes="(max-width: 768px) 800px, (max-width: 1024px) 547px, 547px"
                 priority
                 className="absolute transform -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2"
