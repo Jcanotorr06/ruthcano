@@ -5,8 +5,8 @@ const Work:FC = () => {
   return (
     <section className="flex flex-col self-stretch w-full py-[60px] gap-[10px]">
         <article className="w-fit">
-            <h2 className="ui-5xl lg:ui-7xl font-semibold upper text-surface">
-                My Work
+            <h2 className="ui-5xl lg:ui-7xl font-semibold text-surface">
+                Portfolio
             </h2>
         </article>
         <article className="grid grid-cols-2 gap-[10px]">

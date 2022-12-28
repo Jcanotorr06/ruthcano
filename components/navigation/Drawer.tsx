@@ -85,7 +85,7 @@ const Drawer:FC<Props> = (props:Props) => {
                   }}
                 >
                   <motion.div
-                    className="ui-6xl font-medium w-full px-4"
+                    className="ui-4xl lg:ui-6xl font-medium w-full px-4"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{
