@@ -22,14 +22,11 @@ const Footer:FC = () => {
             </span>
           </div>
           <div className="flex items-center py-3 gap-7 self-stretch text-secondary-body text-ui-lg lg:text-ui-2xl">
-            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" className="transition-colors hover:text-surface">
-                <BsInstagram/>
+            <Link href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="Youtube" className="transition-colors hover:text-red-600">
+                <BsYoutube/>
             </Link>
             <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="transition-colors hover:text-blue-500">
                 <BsLinkedin/>
-            </Link>
-            <Link href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="Youtube" className="transition-colors hover:text-red-600">
-                <BsYoutube/>
             </Link>
           </div>
         </article>
