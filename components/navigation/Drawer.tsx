@@ -22,12 +22,12 @@ const Drawer:FC<Props> = (props:Props) => {
       href: "/about"
     },
     {
-      label: "Contact",
-      href: "/contact"
-    },
-    {
       label: "Work",
       href: "/work/all"
+    },
+    {
+      label: "Contact",
+      href: "/contact"
     }
   ]
 
