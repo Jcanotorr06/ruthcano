@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps, type NextPage } from "next"
+import { GetServerSideProps, GetStaticPaths, GetStaticProps, type NextPage } from "next"
 import { ParsedUrlQuery } from "querystring"
 import { Fragment, useState } from "react"
 import { NextSeo } from "next-seo";
@@ -17,7 +17,7 @@ type PageProps = {
     category: IParams["category"]
 }
 
-export const getStaticPaths:GetStaticPaths = async () => {
+/* export const getStaticPaths:GetStaticPaths = async () => {
     return {
         paths: [
             { params: { category: "all" } },
@@ -27,19 +27,19 @@ export const getStaticPaths:GetStaticPaths = async () => {
         ],
         fallback: false
     }
-}
+} */
 
-export const getStaticProps:GetStaticProps = async (context) => {
+export const getServerSideProps:GetServerSideProps = async (context) => {
     const { category } = context.params as IParams
     const data = category  === "all" ? await getAllWork() : await getWorkByCategory(category)
-    console.log("GET STATIC PROPS")
+    /* console.log("GET STATIC PROPS") */
     const props:PageProps = {
         data,
         category
     }
     return {
         props:props,
-        revalidate: 600
+        /* revalidate: 600 */
     }
 }
 
