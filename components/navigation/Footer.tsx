@@ -63,9 +63,9 @@ const Footer:FC = () => {
         </div>
         <div className="w-fit">
           <small>
-            &copy; {new Date().getFullYear()} - Designed & Developed by 
+            &copy; {new Date().getFullYear()} - Designed & Developed by&nbsp;
             <Link className="text-surface" href="https://www.josephcano.com" target="_blank" rel="noopener noreferrer">
-            &nbsp;Joseph Cano
+            Joseph Cano
             </Link>
           </small>
         </div>

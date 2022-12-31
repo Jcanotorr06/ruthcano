@@ -47,6 +47,24 @@ const WorkGallery:NextPage<PageProps> = (props:PageProps) => {
     const { data, category } = props
     const [selected, setSelected] = useState<WorkResponse|null>(null)
 
+    const selectNext = () => {
+        const index = data.findIndex(page => page.id === selected?.id)
+        if (index === data.length - 1) {
+            setSelected(data[0])
+        } else {
+            setSelected(data[index + 1])
+        }
+    }
+
+    const selectPrev = () => {
+        const index = data.findIndex(page => page.id === selected?.id)
+        if (index === 0) {
+            setSelected(data[data.length - 1])
+        } else {
+            setSelected(data[index - 1])
+        }
+    }
+
     const categoryCapitalized = category.charAt(0).toUpperCase() + category.slice(1)
 
     return (
@@ -87,7 +105,12 @@ const WorkGallery:NextPage<PageProps> = (props:PageProps) => {
                     </ResponsiveMasonry>
                 }
             </section>
-            <Modal selSelected={setSelected} page={selected}/>
+            <Modal 
+                setSelected={setSelected} 
+                page={selected}
+                selectNext={selectNext}
+                selectPrev={selectPrev}
+            />
         </Fragment>
     )
 }

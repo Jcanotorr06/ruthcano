@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { Fragment } from "react";
-import { Description, Message } from "../components/About";
+import { Description, Languages, Message, Skills, Tools } from "../components/About";
 import localFont from "@next/font/local"
 import { GetStaticProps } from "next/types";
 import { getTranslationsByPage } from "../lib/notion";
@@ -55,9 +55,12 @@ const About:NextPage<PageProps>= (props:PageProps) => {
           }
         ]}
       />
-      <section className="w-full flex flex-col pt-[60px] self-stretch grow">
+      <section className="w-full flex flex-col pt-[60px] self-stretch grow gap-4">
         <Message font={Migra} translations={translations}/>
         <Description translations={translations} />
+        <Tools/>
+        <Skills/>
+        <Languages/>
       </section>
     </Fragment>
   )

@@ -12,7 +12,7 @@ const Description:FC<Props> = (props:Props) => {
     const description = translations.find((translation) => translation.label === "about_me")
 
     return (
-        <div className="w-full py-4">
+        <article className="w-full py-4">
             <p data-translate="about_me" className="ui-xs lg:ui-lg">
                 {
                     description ? 
@@ -27,7 +27,7 @@ const Description:FC<Props> = (props:Props) => {
                         "about_me"
                 }
             </p>
-        </div>
+        </article>
     )
 }
 

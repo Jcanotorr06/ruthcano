@@ -40,13 +40,16 @@ const Card:FC<Props> = (props:Props) => {
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             onClick={handleOpen}
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer grayscale hover:grayscale-0 transition-all"
         >
             {
                 media &&
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{
+                        once: true,
+                    }}
                     transition={{ duration: 0.5, staggerChildren: 0.5 }}
                 >
                     <img src={src} alt={title} className="w-full h-full object-cover rounded-lg shadow-lg" />
