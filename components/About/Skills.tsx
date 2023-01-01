@@ -4,12 +4,10 @@ import { motion } from "framer-motion"
 const Skills:FC = () => {
 
     const skills = [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3",
-        "Skill 4",
-        "Skill 5",
-        "Skill 6",
+        "Adaptability / Critical Thinking / Problem Solving",
+        "Teamwork / Active Listening / Communication",
+        "Research / Writing / Information Analysis ",
+        "Project Management / Planning / Attention to Detail",
     ]
 
     const variants = {

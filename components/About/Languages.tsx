@@ -6,19 +6,11 @@ const Languages:FC = () => {
   const languages = [
     {
       name: "English",
-      proficiency: "Bilingual"
+      proficiency: "Bilingual Proficiency"
     },
     {
       name: "Spanish",
-      proficiency: "Native"
-    },
-    {
-      name: "French",
-      proficiency: "Professional Working"
-    },
-    {
-      name: "German",
-      proficiency: "Limited Working"
+      proficiency: "Native Speaker"
     },
   ]
 
@@ -67,7 +59,7 @@ const Languages:FC = () => {
         transition={{delay: 0.5}}
         className="absolute -top-0 left-0 z-0 hidden lg:block"
       >
-        <span className="ui-6xl upper font-semibold opacity-25" style={{writingMode: "vertical-lr"}}>
+        <span className="ui-4xl upper font-semibold opacity-25" style={{writingMode: "vertical-lr"}}>
           Languages
         </span>
       </motion.div>
