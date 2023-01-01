@@ -1,30 +1,34 @@
 import React, { FC } from "react"
 import { motion } from "framer-motion"
-import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiAdobelightroom } from "react-icons/si"
+import { SiAdobeaudition,  SiAdobeillustrator, SiMailchimp, SiAdobepremierepro, SiAdobelightroom, SiNotion } from "react-icons/si"
 
 const Tools:FC = () => {
 
     const tools = [
         {
-            name: "Adobe After Effects",
-            icon: <SiAdobeaftereffects/>
+            name: "Adobe Premiere Pro",
+            icon: <SiAdobepremierepro/>
         },
         {
             name: "Adobe Illustrator",
             icon: <SiAdobeillustrator/>
         },
         {
-            name: "Adobe Photoshop",
-            icon: <SiAdobephotoshop/>
-        },
-        {
-            name: "Adobe Premiere Pro",
-            icon: <SiAdobepremierepro/>
-        },
-        {
             name: "Adobe Lightroom",
             icon: <SiAdobelightroom/>
         },
+        {
+            name: "Adobe Audition",
+            icon: <SiAdobeaudition/>
+        },
+        {
+            name: "Notion",
+            icon: <SiNotion/>
+        },
+        {
+            name: "Mailchimp",
+            icon: <SiMailchimp/>
+        }
     ]
 
     const variants = {

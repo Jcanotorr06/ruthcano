@@ -35,7 +35,7 @@ const Message:FC<Props> = (props:Props) => {
             </motion.div>
             <motion.div
                 id="about-image"
-                className="h-screen w-screen overflow-visible absolute -top-14  z-0"
+                className="h-screen w-screen overflow-visible absolute -top-16  z-0"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{
