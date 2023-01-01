@@ -23,6 +23,8 @@ const Message:FC<Props> = (props:Props) => {
                 animate={{opacity: 1, y: 0}}
                 transition={{
                     duration: 1,
+                    delay: 1,
+                    delayChildren: 1,
                     ease: "easeOut"
                 }}
                 className="mt-24 grow z-10 w-full mix-blend-difference flex items-end lg:px-24"
@@ -32,31 +34,23 @@ const Message:FC<Props> = (props:Props) => {
                 </h1>
             </motion.div>
             <motion.div
-                className="w-fit h-fit overflow-visible"
+                id="about-image"
+                className="h-screen w-screen overflow-visible absolute -top-14  z-0"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{
                     duration: 1.5,
-                    delay: 0.35,
+                    delay: 1.35,
                     ease: "easeOut"
                 }}
             >
-                <Image
-                    src="/images/about_2.webp"
-                    alt="Ruth Cano"
-                    width={828}
-                    height={465}
-                    sizes="(max-width: 768px) 800px, (max-width: 1024px) 547px, 547px"
-                    priority
-                    className="absolute transform -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2"
-                />
             </motion.div>
             <motion.div 
                 initial={{opacity: 0, y: 500}}
                 animate={{opacity: 1, y: 0}}
                 transition={{
                     duration: 1,
-                    delay: 0.25,
+                    delay: 1.25,
                     ease: "easeOut"
                 }}
                 className="lg:my-24 grow z-10 mix-blend-difference w-full text-right lg:px-24"

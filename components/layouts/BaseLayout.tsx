@@ -1,7 +1,7 @@
 import { Fragment, ReactNode, useEffect, useState, type FC } from "react"
 import { Header, Footer, LoadingOverlay } from "../navigation"
 import { useRouter } from "next/router"
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from "framer-motion";
 
 type Props = {
   children: ReactNode
