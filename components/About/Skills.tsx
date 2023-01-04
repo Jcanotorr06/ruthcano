@@ -24,7 +24,7 @@ const Skills:FC = () => {
     return (
         <article className="w-full py-4 flex flex-col md:flex-row gap-4 relative my-8 lg:my-20">
             <div className="w-full md:w-1/3 h-fit">
-                <h3 className="ui-3xl upper font-semibold">Skills</h3>
+                <h3 className="ui-xl lg:ui-3xl upper font-semibold">Skills</h3>
             </div>
             <div className="w-full md:w-2/3 flex flex-col gap-8">
                 {
@@ -43,7 +43,7 @@ const Skills:FC = () => {
                             key={key} 
                             className="w-full gap-4 border-b-2 border-secondary-body"
                         >
-                            <h4 className="ui-xl upper font-semibold">{skill}</h4>
+                            <h4 className="ui-sm lg:ui-xl upper lg:font-semibold">{skill}</h4>
                         </motion.div>
                     ))
                 }

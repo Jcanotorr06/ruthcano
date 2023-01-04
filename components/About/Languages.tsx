@@ -28,7 +28,7 @@ const Languages:FC = () => {
   return (
     <article className="w-full py-4 flex flex-col md:flex-row gap-4 relative my-8 lg:my-20">
       <div className="w-full md:w-1/3 h-fit">
-        <h3 className="ui-3xl upper font-semibold">Languages</h3>
+        <h3 className="ui-xl lg:ui-3xl upper font-semibold">Languages</h3>
       </div>
       <div className="w-full md:w-2/3 flex flex-col gap-8">
         {
@@ -47,7 +47,7 @@ const Languages:FC = () => {
               key={key} 
               className="w-full gap-4 border-b-2 border-secondary-body"
             >
-              <h4 className="ui-xl upper font-semibold">{language.name}</h4>
+              <h4 className="ui-sm lg:ui-xl upper lg:font-semibold">{language.name}</h4>
               <p className="ui-sm">{language.proficiency}</p>
             </motion.div>
           ))
@@ -59,7 +59,7 @@ const Languages:FC = () => {
         transition={{delay: 0.5}}
         className="absolute -top-0 left-0 z-0 hidden lg:block"
       >
-        <span className="ui-4xl upper font-semibold opacity-25" style={{writingMode: "vertical-lr"}}>
+        <span className="lg:ui-3xl upper font-semibold opacity-25" style={{writingMode: "vertical-lr"}}>
           Languages
         </span>
       </motion.div>

@@ -27,15 +27,15 @@ const Message:FC<Props> = (props:Props) => {
                     delayChildren: 1,
                     ease: "easeOut"
                 }}
-                className="mt-24 grow z-10 w-full mix-blend-difference flex items-end lg:px-24"
+                className="mt-24 grow z-10 w-full md:mix-blend-difference flex items-end text-right lg:px-24"
             >
-                <h1 className={`ui-5xl lg:ui-9xl upper ${font.className}`}  data-translate="title_1">
+                <h1 className={`ui-5xl lg:ui-15xl upper ${font.className}`}  data-translate="title_1">
                     {title_1 ? title_1.value : "title_1"}
                 </h1>
             </motion.div>
             <motion.div
                 id="about-image"
-                className="h-screen w-screen overflow-visible absolute -top-16  z-0"
+                className="h-screen w-screen overflow-visible absolute -top-16 -z-10"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{
@@ -53,9 +53,9 @@ const Message:FC<Props> = (props:Props) => {
                     delay: 1.25,
                     ease: "easeOut"
                 }}
-                className="lg:my-24 grow z-10 mix-blend-difference w-full text-right lg:px-24"
+                className="lg:my-24 grow md:mix-blend-difference w-full text-left lg:px-24 z-10"
             >
-                <h1 className={`ui-5xl lg:ui-9xl upper ${font.className}`} data-translate="title_2">
+                <h1 className="ui-5xl lg:ui-12xl upper font-bold" data-translate="title_2">
                     {title_2 ? title_2.value : "title_2"}
                 </h1>
             </motion.div>

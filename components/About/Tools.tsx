@@ -43,9 +43,9 @@ const Tools:FC = () => {
     }
 
     return (
-        <article className="w-full py-4 flex flex-col gap-4 lg:gap-0 lg:grid grid-flow-col grid-cols-7 grid-rows-2 lg:grid-rows-1 my-8 lg:my-20">
+        <article className="w-full py-4 flex flex-col gap-4 lg:gap-0 lg:grid grid-flow-col grid-cols-7 grid-rows-2 lg:grid-rows-1 my-8 lg:my-20 z-10">
             <div className="col-span-7 lg:col-span-3 h-fit">
-                <h3 className="ui-3xl upper font-semibold">Tools</h3>
+                <h3 className="ui-xl lg:ui-3xl upper font-semibold">Tools</h3>
             </div>
             <div className="col-span-7 lg:col-span-4 flex flex-wrap gap-y-24">
                 {
@@ -62,9 +62,9 @@ const Tools:FC = () => {
                                 duration: 0.5,
                             }}
                             key={key}
-                            className="w-1/2 sm:w-1/3 lg:w-1/4 flex lg:justify-center"
+                            className="w-1/4 flex lg:justify-center"
                         >
-                            <div className="w-fit ui-4xl tooltip" data-tip={tool.name}>
+                            <div className="w-fit ui-2xl lg:ui-4xl tooltip" data-tip={tool.name}>
                                 {tool.icon}
                             </div>
                         </motion.div>
