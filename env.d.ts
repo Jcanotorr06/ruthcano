@@ -9,5 +9,8 @@ declare namespace NodeJS {
     REVALIDATION_SECRET: string;
     EMAIL_AUTH_USER: string;
     EMAIL_AUTH_PASS: string;
+    EMAIL_HOST: string;
+    EMAIL_PORT: number;
+    EMAIL_CONTACT_TO: string;
   }
 }

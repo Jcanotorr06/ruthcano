@@ -1,23 +1,25 @@
 import { NextApiHandler } from "next";
 import nodemailer from "nodemailer";
+import { emailTemplate } from "../../utils/contactMailTemplate";
 
 const handler:NextApiHandler = async (req, res) => {
     const transporter = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
+        service: "gmail",
+        port: process.env.EMAIL_PORT,
+        host: process.env.EMAIL_HOST,
+        secure: false,
         auth: {
             user: process.env.EMAIL_AUTH_USER,
             pass: process.env.EMAIL_AUTH_PASS,
         },
-        secure: true,
     })
 
     const mailData = {
-        from: process.env.EMAIL_AUTH_USER,
-        to: process.env.EMAIL_AUTH_USER,
+        from: "\"Portfolio Contact Form\" <llinus907@gmail.com>",
+        to: process.env.EMAIL_CONTACT_TO,
         subject: `Message from ${req.body.name} with email ${req.body.email} from your website`,
         text: req.body.message,
-        html: `<div>${req.body.message}</div>`,
+        html: emailTemplate(req.body.name, req.body.email, req.body.message),
     }
 
     transporter.sendMail(mailData, (error, info) => {
