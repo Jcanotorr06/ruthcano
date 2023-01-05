@@ -19,10 +19,10 @@ const Name:FC = () => {
         </motion.article>
         <article className="flex flex-col lg:flex-row self-stretch lg:justify-end lg:items-end lg:gap-6">
             <div className="flex grow order-3 lg:order-none text-secondary-body gap-[60px] py-[10px] text-lg lg:text-[32px]">
-                <Link href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600">
+                <Link href="https://www.youtube.com/@ruthcano7382" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600">
                     <BsYoutube/>
                 </Link>
-                <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-500">
+                <Link href="https://www.linkedin.com/in/ruthncano" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-500">
                     <BsLinkedin/>
                 </Link>
             </div>
