@@ -50,11 +50,11 @@ const Name:FC = () => {
                     className="w-full lg:w-fit"
                 >
                     <h5 className="ui-xl font-medium text-secondary-body hidden lg:block">
-                        Digital content<br className="hidden lg:block"/>
+                        digital content<br className="hidden lg:block"/>
                         creator
                     </h5>
                     <h5 className="ui-xl font-medium text-secondary-body block lg:hidden">
-                        Digital content creator
+                        digital content creator
                     </h5>
                 </motion.div>
                 <div aria-hidden></div>

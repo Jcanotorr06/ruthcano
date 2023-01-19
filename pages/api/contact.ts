@@ -37,9 +37,9 @@ const handler:NextApiHandler = async (req, res) => {
         html: emailTemplate(req.body.name, req.body.email, req.body.message),
     }
 
-    await new Promise((resolve, reject) => {
+    await new Promise(async (resolve, reject) => {
         // send mail with defined transport object
-        transporter.sendMail(mailData, (error, info) => {
+        await transporter.sendMail(mailData, (error, info) => {
             if (error) {
                 console.log(error)
                 reject(error)

@@ -44,15 +44,14 @@ const Card:FC<Props> = (props:Props) => {
         >
             {
                 media &&
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{
-                        once: true,
-                    }}
-                    transition={{ duration: 0.5, staggerChildren: 0.5 }}
+                <div
                 >
-                    <img src={src} alt={title} className="w-full h-full object-cover rounded-lg shadow-lg" />
+                    <img 
+                        src={src} 
+                        alt={title}
+                        loading="lazy"
+                        className="w-full h-full object-cover rounded-lg shadow-lg"
+                    />
                     <section role="description">
                         <h3 className="text-surface font-semibold">{title}</h3>
                         <footer
@@ -74,7 +73,7 @@ const Card:FC<Props> = (props:Props) => {
                             </motion.p>
                         </footer>
                     </section>
-                </motion.div>
+                </div>
             }
         </motion.div>
     )

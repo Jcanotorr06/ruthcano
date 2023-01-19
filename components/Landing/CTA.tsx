@@ -14,7 +14,10 @@ const CTA:FC = () => {
       <article className="flex py-11 gap-[10px]">
         <div className="w-full text-center flex flex-col gap-4">
           <h2 className="ui-xl lg:ui-3xl xl:ui-4xl upper font-semibold text-center justify-center items-center text-surface">
-            If you have a general or project inquiry, please feel free to contact me.
+          If you would like to know more about my work
+          or talk about a project
+          check out my social media links
+          or feel free to fill out the contact form.
           </h2>
           <button 
             onClick={handleContactMe}
