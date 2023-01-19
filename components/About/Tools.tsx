@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { motion } from "framer-motion"
-import { SiAdobeaudition,  SiAdobeillustrator, SiMailchimp, SiAdobepremierepro, SiAdobelightroom, SiNotion } from "react-icons/si"
+import { SiAdobeaudition,  SiAdobeillustrator, SiMailchimp, SiAdobepremierepro, SiAdobelightroom, SiNotion, SiAdobeindesign } from "react-icons/si"
 
 const Tools:FC = () => {
 
@@ -20,6 +20,10 @@ const Tools:FC = () => {
         {
             name: "Adobe Audition",
             icon: <SiAdobeaudition/>
+        },
+        {
+            name: "Adobe InDesign",
+            icon: <SiAdobeindesign/>
         },
         {
             name: "Notion",
